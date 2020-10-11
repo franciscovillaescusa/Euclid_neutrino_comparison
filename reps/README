@@ -1,0 +1,59 @@
+*******************************************************************************
+*******************************************************************************
+                     REPS - v. Jan 2017
+*******************************************************************************
+*******************************************************************************
+Latest version on https://github.com/matteozennaro/reps
+DOI https://zenodo.org/badge/latestdoi/70810261
+*******************************************************************************
+*******************************************************************************
+Contents of this file:
+--- Installation
+--- Usage:
+------ Parameter file
+------ Usage of reps
+
+*******************************************************************************
+Installation:
+*******************************************************************************
+Just choose among gcc and icc in the Makefile.
+After 'make' the executable reps will be created.
+
+*******************************************************************************
+Usage:
+*******************************************************************************
+To use this code:
+--> prepare a parameter file, based on params.ini
+--> run the code reps
+
+*******************************************************************************
+Parameter file:
+*******************************************************************************
+REPS parameter file is extensively explained in params.ini. Other examples
+can be found in the folder EXAMPLES.
+
+Please, always keep in mind that the code can be used for different purposes.
+FOR SETTING INITIAL CONDITIONS FOR NEWTONIAN SIMULATIONS you need to set
+
+wrong_bc = 0 -> growth rates (used as boundary conditions in the code) will
+                be computed as numerical derivatives of the (square roots of
+                the) power spectra.
+
+and choose between
+
+wrong_nu = 1 -> if you are going to provide the simulation with the tabulated
+                Hubble function produced by REPS.
+wrong_nu = 2 -> if you are letting your sim compute H(z) and your sim does not
+                include relativistic neutrinos in the computation of the Hubble
+                function.
+
+*******************************************************************************
+Running REPS
+*******************************************************************************
+./reps params.ini
+The rescaled power spectra will be saved with names based on your chosen
+output options. Note that, if the code will call a Boltzmann solver, the
+original outputs of the boltzmann code will be stored in the folder PK_TABS
+for reference.
+
+*******************************************************************************
