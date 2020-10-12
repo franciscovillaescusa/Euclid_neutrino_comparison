@@ -1,0 +1,10 @@
+evolver                           = 0
+l_max_g                           = 3500
+l_max_pol_g                       = 3500
+l_max_ncdm                        = 500
+ncdm_fluid_approximation          = 3
+perturb_integration_stepsize      = 0.25
+radiation_streaming_approximation = 3
+recfast_Nz0                       = 100000
+tol_thermo_integration            = 1e-06
+
