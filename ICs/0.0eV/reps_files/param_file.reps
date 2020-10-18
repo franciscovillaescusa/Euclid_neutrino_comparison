@@ -1,0 +1,36 @@
+# boltzmann code
+boltzmann_code     =  camb
+boltzmann_folder   =  /mnt/home/fvillaescusa/software/CAMB-Jan2017/
+k_per_logint_camb  =  30
+
+# input/output options
+neutrino_tabulated_functions = /mnt/home/fvillaescusa/software/reps/tabulated_functions/FF_GG_func_tab.dat
+input_file         =  boundary_conditions.dat
+outputfile         =  0.0eV
+output_format      =  ngenic transfer function
+print_hubble       =  T
+
+# cosmological parameters
+h                  =  0.67
+OB0                =  0.0490
+OC0                =  0.269984542
+OG0                =  2.469e-05
+w0                 = -1.0
+wa                 =  0.0
+As                 =  2.215e-09
+tau_reio           =  0.0925
+ns                 =  0.9619
+kmax               =  50.0
+
+# neutrino parameters
+Neff               =  3.046
+M_nu               =  0.0
+N_nu               =  0.0
+wrong_nu           =  0
+
+# redshifts
+z_final            =  0.
+z_initial          = 127.
+output_number      =  8
+z_output           =  0.0 0.5 1.0 2.0 3.0 10.0 99.0 127.0
+
