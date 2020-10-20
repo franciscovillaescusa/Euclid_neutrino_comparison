@@ -12,7 +12,7 @@ Nsample          512       % sets the maximum k that the code uses,
                            % total number of particles
  
 
-Box              1000000.0   % Periodic box size of simulation
+Box              512000.0   % Periodic box size of simulation
 
 FileBase         ics       % Base-filename of output files
 OutputDir        ./        % Directory for output
@@ -75,7 +75,7 @@ PrimordialIndex  1.0       % may be used to tilt the primordial index (one if ta
 
 
 Phase_flip         0         % if Phase_flip=1 ----> phase = phase+pi		
-RayleighSampling   1         % fix modes amplitude to sqrt(Pk): 1 (NO) 0 (Yes)
+RayleighSampling   0         % fix modes amplitude to sqrt(Pk): 1 (NO) 0 (Yes)
 Seed               482       % seed for IC-generator
 
 
