@@ -6,14 +6,14 @@ k_per_logint_camb  =  30
 # input/output options
 neutrino_tabulated_functions = /mnt/home/fvillaescusa/software/reps/tabulated_functions/FF_GG_func_tab.dat
 input_file         =  boundary_conditions.dat
-outputfile         =  0.0eV
-output_format      =  ngenic transfer function
+outputfile         =  0.15eV
+output_format      =  ngenic transfer functions
 print_hubble       =  T
 
 # cosmological parameters
 h                  =  0.67
 OB0                =  0.0490
-OC0                =  0.269984542
+OC0                =  0.266396931
 OG0                =  2.469e-05
 w0                 = -1.0
 wa                 =  0.0
@@ -23,9 +23,9 @@ ns                 =  0.9619
 kmax               =  50.0
 
 # neutrino parameters
-Neff               =  3.046
-M_nu               =  0.0
-N_nu               =  0.0
+Neff               =  0.00641
+M_nu               =  0.15
+N_nu               =  3.0
 wrong_nu           =  0
 
 # redshifts
