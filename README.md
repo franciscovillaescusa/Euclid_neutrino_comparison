@@ -1,11 +1,11 @@
 This repository contains the codes used by the particle-based group as part of the Euclid neutrino comparison project.
 
-** CLASS **
+**CLASS**
 
 This folder contains the CLASS parameter file needed to define the cosmological model for each cosmology
 
 
-** Codes **
+**Codes**
 
 This folder contains 
 
