@@ -52,6 +52,7 @@ Nmesh  = np.fromfile(f, dtype=np.int32, count=1)[0] #Nmesh size
 Nx     = np.fromfile(f, dtype=np.int32, count=1)[0] #slab offset (not used)
 amplitudes = np.fromfile(f, dtype=np.float32, count=-1)
 f.close()
+```
 
 - Phases_ptype_X.Y. These files contain the phases of the modes. X is the particle type (1-CDM, 2-NU). Y goes from 0 to the number of subfiles - 1. The coordinates of the modes can be obtained from the Coordinates_ptype_X.Y files; both files have the same particle order (i,e. particle 34 in file 3 of Coordinates will correspond to particle 34 in file 3 of Phases). These files can be read in python with a script like this:
 
@@ -65,6 +66,7 @@ Nmesh  = np.fromfile(f, dtype=np.int32, count=1)[0] #Nmesh size
 Nx     = np.fromfile(f, dtype=np.int32, count=1)[0] #slab offset (not used)
 phases = np.fromfile(f, dtype=np.float32, count=-1)
 f.close()
+```
 
 
 **param_files**
