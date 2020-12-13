@@ -117,50 +117,97 @@ rcParams["mathtext.fontset"]='cm'
 #ax1.add_artist(polygon)
 ####################################################################
 
-x_min, x_max = 1e-2, 0.3
-y_min, y_max = 0.9, 1.1
+x_min, x_max = 8e-3, 0.2
+y_min, y_max = 0.925, 1.075
 
 
-fig=figure()
-ax1=fig.add_subplot(111) 
+fig = figure(figsize=(15,14))
+ax1 = fig.add_subplot(221) 
+ax2 = fig.add_subplot(222) 
+ax3 = fig.add_subplot(223) 
+ax4 = fig.add_subplot(224) 
 
-ax1.set_xscale('log')
+for ax in [ax1,ax2,ax3,ax4]:
+    ax.set_xscale('log')
 #ax1.set_yscale('log')
 
-ax1.set_xlim([x_min,x_max])
-ax1.set_ylim([y_min,y_max])
-
-ax1.set_xlabel(r'$k\/[h\/{\rm Mpc}^{-1}]$',fontsize=18)
-ax1.set_ylabel(r'$P(k)\,[(h^{-1}{\rm Mpc})^3]$',fontsize=18)
+for ax in [ax1,ax2,ax3,ax4]:
+    ax.set_xlabel(r'$k\/[h\/{\rm Mpc}^{-1}]$',fontsize=18)
+    ax.set_ylabel(r'$P_{\rm sim}(k)/P_{\rm linear}(k)$',fontsize=18)
+    ax.set_xlim([x_min,x_max])
+    ax.set_ylim([y_min,y_max])
 
 
 f_out='Pk_ratio.pdf'
 
-f1 = 'Pk_0.0eV_z=0.txt'
-f2 = 'Pk_binned_CAMB_z=0.txt'
 
-k1,Pk1 = np.loadtxt(f1, unpack=True) 
-k2,Pk2 = np.loadtxt(f2, unpack=True) 
+######### REPS 512 ############
+f1 = '../Analysis/Pk_0.0eV_512_reps_z=0.txt'
+f2 = '../Analysis/Pk_0.0eV_512_reps_1_z=0.txt'
+f3 = '../Analysis/Pk_binned_CAMB_512_z=0.txt'
+k1, Pk1 = np.loadtxt(f1, unpack=True) 
+k2, Pk2 = np.loadtxt(f2, unpack=True) 
+k3, Pk3 = np.loadtxt(f3, unpack=True) 
+p1,=ax1.plot(k1,Pk1/Pk3,linestyle='-',marker='None',c='r')
+p2,=ax1.plot(k2,Pk2/Pk3,linestyle='-',marker='None',c='b')
+p3,=ax1.plot(k1,0.5*(Pk1+Pk2)/Pk3,linestyle='--',marker='None',c='g')
+p4,=ax1.plot([x_min,x_max],[1,1],linestyle='-',marker='None',c='k')
 
-p1,=ax1.plot(k1,Pk1/Pk2,linestyle='-',marker='None')
-p1,=ax1.plot([1e-2,0.3],[1,1],linestyle='-',marker='None')
+######### 2LPT 512 ############
+f1 = '../Analysis/Pk_0.0eV_512_2LPT_z=0.txt'
+f2 = '../Analysis/Pk_0.0eV_512_2LPT_1_z=0.txt'
+f3 = '../Analysis/Pk_binned_CAMB_512_z=0.txt'
+k1, Pk1 = np.loadtxt(f1, unpack=True) 
+k2, Pk2 = np.loadtxt(f2, unpack=True) 
+k3, Pk3 = np.loadtxt(f3, unpack=True) 
+p1,=ax2.plot(k1,Pk1/Pk3,linestyle='-',marker='None',c='r')
+p2,=ax2.plot(k2,Pk2/Pk3,linestyle='-',marker='None',c='b')
+p3,=ax2.plot(k1,0.5*(Pk1+Pk2)/Pk3,linestyle='--',marker='None',c='g')
+p4,=ax2.plot([x_min,x_max],[1,1],linestyle='-',marker='None',c='k')
+
+######### REPS 1000 ############
+f1 = '../Analysis/Pk_0.0eV_1000_reps_z=0.txt'
+f2 = '../Analysis/Pk_0.0eV_1000_reps_1_z=0.txt'
+f3 = '../Analysis/Pk_binned_CAMB_1000_z=0.txt'
+k1, Pk1 = np.loadtxt(f1, unpack=True) 
+k2, Pk2 = np.loadtxt(f2, unpack=True) 
+k3, Pk3 = np.loadtxt(f3, unpack=True) 
+p1,=ax3.plot(k1,Pk1/Pk3,linestyle='-',marker='None',c='r')
+p2,=ax3.plot(k2,Pk2/Pk3,linestyle='-',marker='None',c='b')
+p3,=ax3.plot(k1,0.5*(Pk1+Pk2)/Pk3,linestyle='--',marker='None',c='g')
+p4,=ax3.plot([x_min,x_max],[1,1],linestyle='-',marker='None',c='k')
+
+######### 2LPT 1000 ############
+f1 = '../Analysis/Pk_0.0eV_1000_2LPT_z=0.txt'
+f2 = '../Analysis/Pk_0.0eV_1000_2LPT_1_z=0.txt'
+f3 = '../Analysis/Pk_binned_CAMB_1000_z=0.txt'
+k1, Pk1 = np.loadtxt(f1, unpack=True) 
+k2, Pk2 = np.loadtxt(f2, unpack=True) 
+k3, Pk3 = np.loadtxt(f3, unpack=True) 
+p1,=ax4.plot(k1,Pk1/Pk3,linestyle='-',marker='None',c='r')
+p2,=ax4.plot(k2,Pk2/Pk3,linestyle='-',marker='None',c='b')
+p3,=ax4.plot(k1,0.5*(Pk1+Pk2)/Pk3,linestyle='--',marker='None',c='g')
+p4,=ax4.plot([x_min,x_max],[1,1],linestyle='-',marker='None',c='k')
+
 
 
 #place a label in the plot
 #ax1.text(0.2,0.1, r"$z=4.0$", fontsize=22, color='k',transform=ax1.transAxes)
 
 #legend
-#ax1.legend([p1,p2],
-#           [r"$z=3$",
-#            r"$z=4$"],
-#           loc=0,prop={'size':18},ncol=1,frameon=True)
+ax1.legend([p1,p2,p3],
+           ["pair 1", "pair 2", "(pair 1 + pair 2)/2"],
+           loc=0,prop={'size':18},ncol=1,frameon=True)
             
             #columnspacing=2,labelspacing=2)
 
 
 
 
-#ax1.set_title(r'$\sum m_\nu=0.0\/{\rm eV}$',position=(0.5,1.02),size=18)
+ax1.set_title(r'${\rm REPS\,\,:\,\,512~h^{-1}{\rm Mpc}}$',position=(0.5,1.02),size=18)
+ax2.set_title(r'${\rm 2LPT\,\,:\,\,512~h^{-1}{\rm Mpc}}$',position=(0.5,1.02),size=18)
+ax3.set_title(r'${\rm REPS\,\,:\,\,1000~h^{-1}{\rm Mpc}}$',position=(0.5,1.02),size=18)
+ax4.set_title(r'${\rm 2LPT\,\,:\,\,1000~h^{-1}{\rm Mpc}}$',position=(0.5,1.02),size=18)
 #title('About as simple as it gets, folks')
 #suptitle('About as simple as it gets, folks')  #for title with several panels
 #grid(True)

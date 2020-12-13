@@ -3,10 +3,10 @@ import Pk_library as PKL
 import sys,os
 
 #################################### INPUT ###########################################
-BoxSize = 512.0 #Mpc/h
+BoxSize = 1000.0 #Mpc/h
 grid    = 512
 fin     = '../param_files/0.0eV/reps_files/0.0eV_Pm_rescaled_z0.0000.txt'
-fout    = 'Pk_binned_CAMB_z=0.txt'
+fout    = 'Pk_binned_CAMB_1000_z=0.txt'
 ######################################################################################
 
 # read Pk
