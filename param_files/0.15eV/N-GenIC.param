@@ -28,7 +28,7 @@ OmegaLambda         0.681015458    % Cosmological constant (at z=0)
 OmegaBaryon         0.0000         % Baryon density        (at z=0)
 OmegaDM_2ndSpecies  0.003587601    % Omega for a second dark matter species (at z=0)
 HubbleParam         0.67           % Hubble paramater
-Hzi                 55.6255        % H(z) at starting redshift in (km/s/kpc/h)
+Hzi                 83.0231        % H(z) at starting redshift in (km/s/kpc/h)
 
 Redshift         127           % Starting redshift
 Sigma8           1.0           % P(k) normalization at that Redshift! Not used!!!
