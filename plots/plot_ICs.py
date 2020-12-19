@@ -117,7 +117,7 @@ rcParams["mathtext.fontset"]='cm'
 #ax1.add_artist(polygon)
 ####################################################################
 
-x_min, x_max = 8e-3, 0.2
+x_min, x_max = 8e-3, 3.0
 y_min, y_max = 0.925, 1.075
 
 
