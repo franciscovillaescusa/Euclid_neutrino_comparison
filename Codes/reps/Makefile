@@ -1,9 +1,9 @@
 ## Your favourite compiler
-#CC=gcc
-CC=icc
+CC=gcc
+#CC=icc
 
-#OMPFLAGS=-fopenmp
-OMPFLAGS=-openmp
+OMPFLAGS=-fopenmp
+#OMPFLAGS=-openmp
 
 ## Other options
 CFLAGS=-lm -Wall
