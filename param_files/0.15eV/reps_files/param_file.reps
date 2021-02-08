@@ -1,10 +1,10 @@
 # boltzmann code
-boltzmann_code     =  camb
-boltzmann_folder   =  /mnt/home/fvillaescusa/software/CAMB-Jan2017/
-k_per_logint_camb  =  30
+boltzmann_code     =  class
+boltzmann_folder   =  /mnt/home/fvillaescusa/software/class_public/
+k_per_logint_camb  =  60
 
 # input/output options
-neutrino_tabulated_functions = /mnt/home/fvillaescusa/software/reps/tabulated_functions/FF_GG_func_tab.dat
+neutrino_tabulated_functions = /mnt/ceph/users/fvillaescusa/Euclid/Euclid_neutrino_comparison/Codes/reps/tabulated_functions/FF_GG_func_tab.dat
 input_file         =  boundary_conditions.dat
 outputfile         =  0.15eV
 output_format      =  ngenic transfer functions
@@ -20,7 +20,7 @@ wa                 =  0.0
 As                 =  2.215e-09
 tau_reio           =  0.0925
 ns                 =  0.9619
-kmax               =  50.0
+kmax               =  30.0
 
 # neutrino parameters
 Neff               =  0.00641
@@ -33,3 +33,7 @@ z_final            =  0.
 z_initial          = 127.
 output_number      =  8
 z_output           =  0.0 0.5 1.0 2.0 3.0 10.0 99.0 127.0
+
+# class precision files
+class_base_par_file = ../../../CLASS/M150meV_class_settings.ini
+class_precision_file = ../../../CLASS/fs2_class_precision.pre
