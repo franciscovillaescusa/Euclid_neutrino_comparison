@@ -1,0 +1,39 @@
+# boltzmann code
+boltzmann_code     =  class
+boltzmann_folder   =  /mnt/home/fvillaescusa/software/class_public/
+k_per_logint_camb  =  60
+
+# input/output options
+neutrino_tabulated_functions = /mnt/ceph/users/fvillaescusa/Euclid/Euclid_neutrino_comparison/Codes/reps/tabulated_functions/FF_GG_func_tab.dat
+input_file         =  boundary_conditions.dat
+outputfile         =  0.15eV
+output_format      =  ngenic transfer functions
+print_hubble       =  T
+
+# cosmological parameters
+h                  =  0.67
+OB0                =  0.0490
+OC0                =  0.266396931
+OG0                =  2.469e-05
+w0                 = -1.0
+wa                 =  0.0
+As                 =  2.215e-09
+tau_reio           =  0.0925
+ns                 =  0.9619
+kmax               =  30.0
+
+# neutrino parameters
+Neff               =  0.00641
+M_nu               =  0.15
+N_nu               =  3.0
+wrong_nu           =  0
+
+# redshifts
+z_final            =  0.
+z_initial          = 127.
+output_number      =  8
+z_output           =  0.0 0.5 1.0 2.0 3.0 10.0 99.0 127.0
+
+# class precision files
+class_base_par_file = ../../../CLASS/M150meV_class_settings.ini
+class_precision_file = ../../../CLASS/fs2_class_precision.pre
