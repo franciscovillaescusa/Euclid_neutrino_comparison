@@ -1,5 +1,5 @@
 
-Nmesh            2048      % This is the size of the FFT grid used to 
+Nmesh            1024      % This is the size of the FFT grid used to 
                            % compute the displacement field. One
                            % should have Nmesh >= Nsample.
 

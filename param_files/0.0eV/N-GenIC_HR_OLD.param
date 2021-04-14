@@ -1,5 +1,5 @@
 
-Nmesh            2048      % This is the size of the FFT grid used to 
+Nmesh            1024      % This is the size of the FFT grid used to 
                            % compute the displacement field. One
                            % should have Nmesh >= Nsample.
 
@@ -17,7 +17,7 @@ Box              512000.0   % Periodic box size of simulation
 FileBase         ics       % Base-filename of output files
 OutputDir        ./        % Directory for output
 
-GlassFile        ../../Codes/N-GenIC_growth/GLASS/dummy_glass_NU_64_64.dat % Glass-File
+GlassFile        ../../Codes/N-GenIC_growth/GLASS/dummy_glass_dmonly_64.dat % Glass-File
 GlassTileFac     16               % Number of times the glass file is
                                   % tiled in each dimension (must be
                                   % an integer)
@@ -26,9 +26,9 @@ GlassTileFac     16               % Number of times the glass file is
 Omega               0.318984532    % Total matter density  (at z=0)
 OmegaLambda         0.681015458    % Cosmological constant (at z=0)
 OmegaBaryon         0.0000         % Baryon density        (at z=0)
-OmegaDM_2ndSpecies  0.003587601    % Omega for a second dark matter species (at z=0)
+OmegaDM_2ndSpecies  0.0000         % Omega for a second dark matter species (at z=0)
 HubbleParam         0.67           % Hubble paramater
-Hzi                 83.0231        % H(z) at starting redshift in (km/s/kpc/h)
+Hzi                 83.30291       % H(z) at starting redshift in (km/s/kpc/h)
 
 Redshift         127           % Starting redshift
 Sigma8           1.0           % P(k) normalization at that Redshift! Not used!!!
@@ -48,12 +48,12 @@ WhichSpectrum    2         % "1" selects Eisenstein & Hu spectrum,
                            % otherwise, Efstathiou parametrization is used
 
 
-FileWithInputSpectrum   ./reps_files/0.15eV_Pm_rescaled_z127.0000.txt 
-FileWithTransfer        ./reps_files/0.15eV_rescaled_transfer_z127.0000.txt
+FileWithInputSpectrum   ./reps_files/0.0eV_Pm_rescaled_z127.0000.txt 
+FileWithTransfer        ./reps_files/0.0eV_rescaled_transfer_z127.0000.txt
 
-FileWithBGrowth         ./reps_files/0.15eV_fcb_z127.0000.txt
-FileWithCDMGrowth       ./reps_files/0.15eV_fcb_z127.0000.txt
-FileWithNUGrowth        ./reps_files/0.15eV_fn_z127.0000.txt
+FileWithBGrowth         ./reps_files/0.0eV_fm_z127.0000.txt
+FileWithCDMGrowth       ./reps_files/0.0eV_fm_z127.0000.txt
+FileWithNUGrowth        ./reps_files/0.0eV_fm_z127.0000.txt
 
 
 InputSpectrum_UnitLength_in_cm  3.085678e24 % defines length unit of tabulated
@@ -100,9 +100,9 @@ WDM_PartMass_in_kev  10.0   % This is the particle mass in keV of the
 		     	    % WDM particle
 
 
-NU_On                1
-NU_Vtherm_On         1
-NU_PartMass_in_ev    0.15
+NU_On                0
+NU_Vtherm_On         0
+NU_PartMass_in_ev    0.0
 
 
 
