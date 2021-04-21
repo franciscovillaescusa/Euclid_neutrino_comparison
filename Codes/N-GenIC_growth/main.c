@@ -102,7 +102,9 @@ void displacement_fields(void)
   MPI_Request request;
   MPI_Status status;
   gsl_rng *random_generator;
-  int i, j, k, ii, jj, kk, axes;
+  //int i, j, k, ii, jj, kk, axes;
+  int ii, jj, kk, axes;
+  long long i,j,k;
   int n;
   int sendTask, recvTask;
   double fac, vel_prefac;
